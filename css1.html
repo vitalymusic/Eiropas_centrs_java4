@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
     <style>
+        body{
+            font-size: 16pt;
+        }
+
+
         h1{
             color:red;
             background-color: #7E5A9B;
@@ -22,6 +27,15 @@
         h1{
             color:green
         }
+        img{
+            width: 250px;
+        }
+        img.small{
+            width: 150px;
+        }
+        img.big{
+            width: 450px;
+        }
     </style>
 </head>
 <body>
@@ -37,7 +51,11 @@
             </p>
             <p>
         Zemākā prioritāte ir stiliem pēc noklusējuma. Tos nosaka pārlūkprogramma. Piešķirtiem stiliem ir augstāka prioritāte. Ja CSS failos atrodas divi pilnīgi vienādi stili tad vērā tiek ņemts pēdējais ielasītais. Tādā veidā faila sākumā var uzrakstīt vienu stilu, bet vēlāk pēc kāda notikuma to var pārrakstīt ar jaunu stila noteikumu. Stila svara pakāpe tiek aprēķināta pēc īpašas tabulas, bet pēc būtības jo vairāk elementu klases ir iekļautas selektorā, jo spēcīgāks ir stils.</p>
-    <img src="" alt="">
+    <img src="./img/pic1.gif" class="small" alt="">
+    <img src="./img/pic1.gif" class="small" alt="">
+    <img src="./img/pic1.gif" class="big" alt="">
+    <img src="./img/pic1.gif" class="big" alt="">
+    <img src="./img/pic1.gif" class="" alt="">
 
 </body>
 </html>
