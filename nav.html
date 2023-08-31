@@ -4,16 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex navigacija</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        nav{
+            background-color: #4eacdb;
+            height:70px;
+            display: flex;
+            justify-content: center;
+            /* gap: 20px; */
+            align-items: center;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            border-right: 1px solid #72ccf9;
+            padding:0px 10px;
+        }
+        nav a:last-child{
+            border:none;
+        }
+
+        .services_container{
+            display: flex;
+            justify-content: center;
+            gap:50px;
+            flex-wrap: wrap;
+        }
+
+        .service{
+            background-color: #4eacdb;
+            padding: 20px;
+            border-radius: 10px;
+            color:white;
+            width:300px
+        }
+        .main_title{
+            text-align: center;
+            margin:50px auto;
+        }
+    </style>
 </head>
 <body>
     <nav>
-        <a href="#">Nav linki</a>
-        <a href="#">Nav linki</a>
-        <a href="#">Nav linki</a>
-        <a href="#">Nav linki</a>
-        <a href="#">Nav linki</a>
-        <a href="#">Nav linki</a>
-        <a href="#">Nav linki</a>
+        <a href="#">Studenti &#9662;</a>
+        <a href="#">Mācības &#9662;</a>
+        <a href="#">Saturs &#9662;</a>
+        <a href="#">Uzstādījumi &#9662;</a>
+        <a href="#">Mācību plāns &#9662;</a>
+        <a href="#">Karjeras izglītība &#9662;</a>
+        <a href="#">Projekti &#9662;</a>
     </nav>
+    <main>
+        <h1 class="main_title">Mūsu pakalpojumi</h1>
+        <div class="services_container">
+            <div class="service">
+                <h3>Pakalpojums 1</h3>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                    <li>item 4</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>Pakalpojums 2</h3>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                    <li>item 4</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>Pakalpojums 3</h3>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                    <li>item 4</li>
+                </ul>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
