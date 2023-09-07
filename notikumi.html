@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @keyframes animacija1{
+            0%{
+                background-color: rgb(159, 189, 22);
+                top:0px
+            }
+            25%{
+                background-color: rgb(83, 9, 126);
+                top:-20px
+            }
+            50%{
+                background-color: rgb(196, 9, 109);
+                top:0px
+            }
+            75%{
+                background-color: rgb(182, 237, 3);
+                top:10px
+            }
+
+            100%{
+                background-color: rgb(159, 189, 22);
+                top:0px
+            }
+        }
+
+
+
         .container{
             display: flex;
             gap:20px;
@@ -18,8 +44,9 @@
             align-items: center;
             color:white;
             font-size: 30pt;
-
-
+            position: relative;
+            top:0px;
+            opacity: .3;
            
 
 
@@ -32,8 +59,18 @@
             */
             background-color: rgb(223, 162, 9);
             cursor: pointer;
+            top:-10px;
+            opacity: 1;
+            /* Animacijas */
+
+            /* transition: top .5s linear; */
+            /* transition: top .5s cubic-bezier(0,.76,.55,2.02); */
+            /* transition: all .5s cubic-bezier(0,.76,.55,2.02); */
 
          }
+
+
+
 
          .container div:active{
             /* 
@@ -41,6 +78,12 @@
             */
             background-color: rgb(255, 0, 0);
             cursor: pointer;
+
+            animation-name: animacija1;
+            animation-duration: .8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 50ms;
 
          }
 
