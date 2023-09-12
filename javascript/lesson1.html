@@ -93,12 +93,20 @@
             console.log(skaitlis);
 
 
-            var platums = prompt("Ievadi istabas platumu"),
-                garums =  prompt("Ievadi istabas garumu"),
+            var platums = +prompt("Ievadi istabas platumu"),
+                garums =  +prompt("Ievadi istabas garumu"),
                 laukums = platums*garums;
+            // var perimetrs = 2*(Number(platums)+Number(garums));    
+            var perimetrs = 2*(platums+garums); 
+            
+            // Unārais + (pirms Prompt) -> konvertē teksta virkni par skaitli
 
-                document.write(`
-                     <h1>Istabas laukums ir, ${laukums.toFixed(2)}</h1>`);  
+                document.write(`<h1>Istabas laukums ir, ${laukums.toFixed(2)} kv.m.</h1>`);  
+                document.write(`<h1>Istabas perimetrs ir, ${perimetrs.toFixed(2)} m.</h1>`);  
+
+                console.log(perimetrs);
+
+                // NaN - saskaitot skaitļus no lodziņiem;
 
 
 
