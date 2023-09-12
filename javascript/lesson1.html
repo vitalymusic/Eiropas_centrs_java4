@@ -50,12 +50,56 @@
 
 
     // console.log(prompt("Ka tevi sauc?"));
-    var name = prompt("Ka tevi sauc?");
+    // var name = prompt("Ka tevi sauc?");
 
-    //alert(`Esi sveicināts, ${name}!!!`);
-    document.write(`
-        <h1>Esi sveicināts, ${name}!!!</h1>`);             
+    // //alert(`Esi sveicināts, ${name}!!!`);
+    // document.write(`
+    //     <h1>Esi sveicināts, ${name}!!!</h1>`);             
 
     // Tiek izvadīts uz lapas kā h1 virsraksts 
+
+
+
+    // Darbības ar skaitļiem
+    var num3 = 20; 
+    var num4 = 35; 
+
+    var answer = num3 + num4;
+        answer = num3 - num4;
+        answer = num3 * num4;
+        answer = num3 / num4;
+
+        answer = num3*(num3+num4)/num4;
+
+            // Skaitļu noapaļošana (izvade) līdz 2 zīmēm aiz komata
+
+            answer.toFixed(2);
+            console.log(answer);
+
+            // Math
+        
+            var skaitlis = Math.ceil(answer) //32
+                skaitlis = Math.round(answer) //31
+                skaitlis = Math.trunc(answer) //31
+                //Math.max()
+                //Math.min()
+                //Math.pow() 
+                //skaitlis = 1+Math.random()*255 //Ģenerē skaitli no 0 līdz 1
+                skaitlis = Math.trunc(1+Math.random()*255) //Ģenerē skaitli no 0 līdz 1
+
+
+
+
+            console.log(skaitlis);
+
+
+            var platums = prompt("Ievadi istabas platumu"),
+                garums =  prompt("Ievadi istabas garumu"),
+                laukums = platums*garums;
+
+                document.write(`
+                     <h1>Istabas laukums ir, ${laukums.toFixed(3)}!!!</h1>`);  
+
+
 
 </script>
