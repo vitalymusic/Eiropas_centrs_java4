@@ -1,0 +1,60 @@
+<script>
+    // tas ir komentārs
+
+    // mainigo nosaukumi tar ar maziem, 
+    // ja mainiga nosaukums sastav no diviem vai vairak vārdiem, tad rakstam camelCase
+    // pievienotasVertibasNodoklis
+
+    // Mainigo nosaukumi nevar sakties ar ciparu
+    // Katras instrukcijas beigas liekam semikolu (;)
+
+    // Datu un mainigo tipi
+
+
+// Vienkāršie datu tipi
+    var num1 = 234234234; //int
+    var num2 = 10.20; // float
+    var teksts = "Tas ir teksts"; //string
+    var boolean = true; //boolean tipa mainigais
+// Saliktie datu tipi
+    var arr1 = []; //masīvs 
+    var arr2 = ["teksts",23,false,["black","white"]];
+
+
+    var maja1 = {
+        color:"green",
+        istabu_skaits:4,
+        pardota:false,
+        cena:200000.99,
+        dzivnieki:["kakis","suns","papagailis"]
+        // objekts
+    };
+
+    var output = `
+            <div class="container">
+                    <h1>Skaitļa vērtība ir: ${num1}</h1>
+            </div> 
+    `;
+    // datu izvade:
+    console.log(maja1,teksts) //izvada datus Konsolē
+    document.write(num1);//izvada datus HTML dokumentā
+    document.write("<h1>Labdien</h1>");
+    document.write("<h1>Skaitļa vērtība ir: " + num1 + "</h1>"); //Konkatenācija
+    document.write(`
+        <h1>Skaitļa vērtība ir: ${num1}</h1>`); //Šablona izvade
+
+    document.write(maja1.color, maja1.cena,maja1.dzivnieki);
+
+
+    // Prompt("Cik jums ir gadu?")
+
+
+    // console.log(prompt("Ka tevi sauc?"));
+    var name = prompt("Ka tevi sauc?");
+
+    alert(`Esi sveicināts, ${name}!!!`);
+
+
+    // Tiek izvadīts uz lapas kā h1 virsraksts 
+
+</script>
