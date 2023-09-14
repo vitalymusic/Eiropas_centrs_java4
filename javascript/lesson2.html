@@ -34,8 +34,19 @@
         izvade = teksts.replaceAll("JavaScript","<b>JavaScript ES6</b>");//Meklē un aizvieto tekstu
         izvade = teksts2.trim();//Noņem atstarpes no teksta virknes sākuma un beigām (apstrādā formas)
 
+        // Regulārās izteiksmes
+        var talrunis = "+37122334451"
+        var regex = /[A-Z]/g;
+            regex = /[a-z]/g;
+            regex = /[0-9]/g;
+            regex = /^(\+371)([0-9]{8})/g;
+            // Regulārās izteiksmes ceļvedis(https://regexr.com/39t6d)
 
-        
+        izvade = talrunis.match(regex);
+
+
+
+
 
 
 
