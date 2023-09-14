@@ -1,0 +1,47 @@
+<script>
+    var teksts = "";
+    var teksts2 = '';
+    var teksts3 = ``;//Izmantojam HTML struktūras izvadei
+
+    teksts = "JavaScript ir skriptu valoda, kas balstīta uz prototipu koncepta. Valoda pamatā ir pazīstama pēc to izmantošanas tīmekļa vietnēs izpildīšanai uz klienta datora. Tā \"sākotnēji\" tika izstrādāta firmā \n Netscape Communications ar nosaukumu Mocha, vēlāk LiveScript, līdz ieguva tagadējo nosaukumu. Lai gan valodas sintakse ir līdzīga Sun Microsystems Java valodai, JavaScript vairāk līdzinās tādām funkcionālajām valodām kā Scheme un Self, tāpat arī Python. \t 1997.—1999. gadā valoda tika standartizēta ar nosaukumu ECMAScript."
+    teksts2 = "         Jauns teksts, kas tiek pievienots klāt        ";
+
+    //Zīmju ekranēšana - \
+    // \n jaunas rindiņas izveide teksta virknē
+    // \t - tabulācijas simbols
+
+
+    console.log(teksts);
+    // document.write(teksts);
+
+    // Teksta virknei ir tikai viena īpašība - tas ir garums (length)
+
+    console.log(teksts.length);
+
+   var  izvade = teksts.toLowerCase(); //Taisa mazus burtus
+        izvade = teksts.toUpperCase();
+        izvade = teksts.split(''); //Sadala tekstu pa simbolam
+        izvade = teksts.split('. ');//sadala tekstu pēc noteikta simbola
+        izvade = teksts.slice(10); //nogriež teksta sākumu 
+        izvade = teksts.slice(0,13); //nogriež teksta sākumu  un beigas
+        izvade = teksts.slice(-3); //nogriež no beigām
+        // substring(indexStart, indexEnd)
+
+        izvade = teksts.concat('<br>',teksts2,"<hr>");//Savieno vairākās teksta virknes
+        izvade = teksts.search("ir,");//atgriež simbola numuru vai arī -1 ja neko nav atradis
+        izvade = teksts.indexOf("sākotnēji");
+        izvade = teksts.repeat(4);//atkārto tekstu
+        izvade = teksts.replaceAll("JavaScript","<b>JavaScript ES6</b>");//Meklē un aizvieto tekstu
+        izvade = teksts2.trim();//Noņem atstarpes no teksta virknes sākuma un beigām (apstrādā formas)
+
+
+        
+
+
+
+
+
+
+   document.write(izvade);
+    console.log(izvade);
+</script>
