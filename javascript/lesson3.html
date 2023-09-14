@@ -12,13 +12,57 @@
             i=i+1; //saīsināti to bar pierakstīt i++
             // i++;
         }
-
         for(j=0;j<10;j++){
             document.write(`<h1>Mainīgā "I" vērtība ir ${j}</h1>`)
         }
 
 
+        // Funkcijas - tas ir koda gabals ko var vairāk reizes palaist
+
+        // function reizinasana(){
+        //     console.log(2*7);
+        // }
+        function reizinasana(sk1,sk2){
+            // console.log(sk1*sk2);
+            return sk1*sk2;
+        } 
+        // funkcijas deklarācija
+
+       var result = reizinasana(10,40);//funkcijas palaišana
+       result = reizinasana(123,432);//funkcijas palaišana
+        reizinasana(567,98);//funkcijas palaišana
+        
+
+        (function(){
+            reizinasana(123432)
+        }) //Anonīmā funkcija strādā ar notikumiem
+
+        // var dalisana = function(sk1, sk2){
+        //     return sk1/sk2
+        //     // definē funkcijas kā maiinīgo
+        // }
+        var dalisana = (sk1,sk2)=>{
+             // definē funkcijas kā maiinīgo saīsinātais pieraksts
+             return sk1/sk2
+        }
+
+        var saskaitiUnReizini = (sk1,sk2)=>{
+
+                return {
+                    saskaitits: sk1+sk2,
+                    sareizinats:sk1*sk2
+                }
+        }
+        
+        //document.write(`<h3>${dalisana(4,3)}</h3>`);
+        var rezultats = saskaitiUnReizini(4,3);
+        document.write(`
+            <h3>Skaitļu summa ir ${rezultats.saskaitits} 
+                un 
+            reizinājums ir: ${rezultats.sareizinats}</h3>`);
+
 </script>
 <script>
-    console.log("tas ir "+i);
+    // console.log("tas ir "+i);
+    console.log(result);
 </script>
