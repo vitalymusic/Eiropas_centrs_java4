@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border{
+            border:2px solid red;
+            padding: 20px;
+        }
+        .container{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Darbības ar elementiem uz lapas</h1>
+    <p>Šeit būs teksts</p>
+    <img src="" alt="Tukš attēls" width="300px">
+    <div class="container">
+
+    </div>
+    <input type="text" id="textInp">
+    <a href="">Saite</a>
+
+    <script>
+        // JS kodu, kas strādā ar elementiem uz lapas jānovieto apakšā
+
+        // Lai varētu veikt darbības ar lapas elmentiem tie ir jāatlasa un jāsaglabā mainīgajos
+
+     const virsraksts1 = document.querySelector('h1'),
+           rindkopa = document.querySelector('p'),
+           attels1 =  document.querySelector('img'),
+           bloks1 = document.querySelector('div.container'),
+           ievadesLauks = document.querySelector('#textInp'),//# selektorā nozīmē, ka elements tiek atlasīts pēd ID atribūta 
+           saite = document.querySelector('a');
+
+     
+     
+     
+           console.log(virsraksts1);
+
+            // Jebkurā elementā varam ierakstit tekstu vai HTML kodu
+
+            rindkopa.innerText = "Šis teksts ir izmainīts ar JS";
+            document.title = virsraksts1.innerText;//Nolasa tekstu
+            attels1.setAttribute("src","../img/pic1.gif");
+            attels1.setAttribute("alt","nav tukša bilde");
+            bloks1.innerHTML = `Attēla platums ir ${attels1.getAttribute("width")}`;
+
+            // Katram elementam pievienot Inline stilus
+            virsraksts1.style.color = "red";
+            virsraksts1.style.background = "yellow";
+            virsraksts1.style.fontSize = "50pt";
+
+
+
+            // Pievienot, nonemt definētas css klases;
+
+            bloks1.classList.add("border");
+            bloks1.classList.remove("container");
+
+        // Formas elementiem ir savi JS atribūti
+
+        ievadesLauks.value = 255;
+        ievadesLauks.placeholder = "Šeit ir teksts";
+
+
+        // Notikumi
+
+        //Populārākie notikumi:
+        // 1. onclick - pēc klikšķa
+        // 2. oninput - pēc ievades
+        // 3. onmouseover - pele uziet virsū elementam
+        // 4. onmouseleave - pele aiziet prom no elementa
+        // 5. onkeydown - nospiests klaviatūras taustiņš
+        // 6. onkeyup - atlaists klaviatūras taustiņš
+        // https://www.w3schools.com/js/js_htmldom_events.asp
+
+
+    </script>
+</body>
+</html>
