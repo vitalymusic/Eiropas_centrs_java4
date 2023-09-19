@@ -4,8 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        .card{
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Notikumu pielikšana vairākiem vienādiem elementiem</h1>
+    <div class="container">
+        <div class="card">
+            <div><img src="" alt=""></div>
+            <p></p>
+        </div>
+        <div class="card">
+            <div><img src="" alt=""></div>
+            <p></p>
+        </div>
+        <div class="card">
+            <div><img src="" alt=""></div>
+            <p></p>
+        </div>
+        <div class="card">
+            <div><img src="" alt=""></div>
+            <p></p>
+        </div>
+        <div class="card">
+            <div><img src="" alt=""></div>
+            <p></p>
+        </div>
+    </div>
+
+    <script>
+        var cards = document.querySelectorAll('.card');
+            //document.querySelectorAll() = atlasa veirākus elementus ar vienādu selektoru un saglabā tos kā masīvu;
+
+
+
+            console.log(cards);
+
+            // for(var i=0;i<cards.length;i++){
+            //     cards[i].style.background = "green";
+            // }
+            // KLasiskais for cikls ir katrs elements norādāms kā masīva elements ar tā indeksu
+
+            for(card of cards){
+                card.style.background = "white";
+            }
+            // for of cikls ļauj vienkārsāk veikt elementu pārlasi no masīva
+
+            for(card of cards){
+                card.onclick = (event)=>{
+                    console.log(event.target);
+                    for(card of cards){ 
+                        //no sākuma visām kartiņam noņemu fonu
+                    card.style.background = "";
+                 }
+
+                    // event.target - ļauj atpazīt tikai to elementu uz kura bijis notikums
+                    event.target.style.background = "green";
+                }
+            }
+
+
+            
+
+    </script>
 </body>
 </html>
