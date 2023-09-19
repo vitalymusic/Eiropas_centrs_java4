@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .answer{
+            padding: 30px;
+            background-color: antiquewhite;
+        }
+        .calc{
+            padding: 30px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calc">
+        <input type="text" name="" id="inp1" placeholder="skaitlis 1">
+        <input type="text" name="" id="inp2" placeholder="skaitlis 2">
+        <button>Saskaitīt</button>
+        <button id="clearBtn">Notīrīt</button>
+    </div>
+    <div class="answer">
+        <h1>Atbilde</h1>
+    </div>
+    
+    <script>
+        var sk1 = document.querySelector("#inp1"),
+            sk2 = document.querySelector("#inp2"),
+            button = document.querySelector("button"),
+            clearBtn = document.querySelector("#clearBtn"),
+            answerDiv = document.querySelector(".answer");
+
+
+            button.onclick = ()=>{
+                console.log(sk1,sk2);
+                atbilde = +sk1.value + +sk2.value;
+                
+                //answerDiv.append(`<p>Šo skaitļu summa ir: ${atbilde}</p>`);
+                // append() pievieno saturu atlasītā elementa beigās;
+
+                answerDiv.innerHTML += `<p>Šo skaitļu summa ir: ${atbilde}</p>`;
+            }
+            clearBtn.onclick = ()=>{
+                sk1.value = "";
+                sk2.value = "";
+                if(document.querySelector(".answer p")){
+                    document.querySelector(".answer p").remove();
+                }
+                
+                // metode remove() - izdzēš atlasīto elementu.
+            }
+
+
+
+
+
+    </script>
+</body>
+</html>
