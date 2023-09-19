@@ -1,0 +1,37 @@
+<script>
+    // Zarošanās
+    // Izpilda kodu ja nosacījums ir patiess
+    var vecums = prompt("Cik tev ir gadu?");
+    if(vecums >=18){
+         // Izpilda kodu ja nosacījums ir patiess
+        console.log("atļauts apmeklēt lapu");
+    }else if(vecums >=15 && vecums <18){
+        console.log("atļauts apmeklēt lapu ar vecāku klātbūtni");
+    }
+    else{
+        // Izpilda kodu ja nosacījums nav patiess
+        console.log("nav atļauts apmeklēt lapu");
+    }
+
+    document.write(`
+        <h1>${vecums < 18?"Pārāk jauns":"Atbilst vecumam</h1>"}
+    `);//ternārais operators (IF aizstājējs)
+
+    var diena = 4;
+    var atbilde = "";
+    switch(diena){
+            //šī konkstrukcija ir vajadzīga lai pārlasītu un salīdzinātu daudz iespējamo variantu
+        case 1: atbilde = "Pirmdiena";break;
+        case 2:atbilde = "Otrdiena";break;
+        case 3:atbilde = "Trešdiena";break;
+        case 4:atbilde = "Ceturtdiena";break;
+        case 5:atbilde = "Piektdiena";break;
+        case 6:atbilde = "Sestdiena";break;
+        case 7:atbilde = "Svētdiena";break;
+        default:atbilde = "Nav tādas dienas";break;
+
+    }
+    document.write(atbilde);
+
+
+</script>
