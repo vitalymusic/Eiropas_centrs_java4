@@ -16,6 +16,12 @@
             border: 2px solid red;
             padding: 20px;
         }
+        .card p{
+            display:none;
+        }
+        .active{
+            display:block !important;
+        }
     </style>
 </head>
 <body>
@@ -23,23 +29,23 @@
     <div class="container">
         <div class="card">
             <div><img src="" alt=""></div>
-            <p></p>
+            <p>saturs 1</p>
         </div>
         <div class="card">
             <div><img src="" alt=""></div>
-            <p></p>
+            <p>saturs 2</p>
         </div>
         <div class="card">
             <div><img src="" alt=""></div>
-            <p></p>
+            <p>saturs 3</p>
         </div>
         <div class="card">
             <div><img src="" alt=""></div>
-            <p></p>
+            <p>saturs 4</p>
         </div>
         <div class="card">
             <div><img src="" alt=""></div>
-            <p></p>
+            <p>saturs 5</p>
         </div>
     </div>
 
@@ -67,10 +73,12 @@
                     for(card of cards){ 
                         //no sākuma visām kartiņam noņemu fonu
                     card.style.background = "";
+                    card.querySelector("p").classList.remove('active');
                  }
 
                     // event.target - ļauj atpazīt tikai to elementu uz kura bijis notikums
                     event.target.style.background = "green";
+                    event.target.querySelector("p").classList.add('active');
                 }
             }
 
