@@ -89,18 +89,26 @@
         // Notikumu uzlikšana elementam - 
 
 
+
         virsraksts1.onclick = function(event){
             console.log(event);
             virsraksts1.classList.toggle('border');
         }
 
-        document.querySelector("#btn1").onclick = function(){
-            attels1.setAttribute("src","https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png");
-
+        var atteli = [
+            "https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png",
+            "https://www.bmw.co.uk/content/dam/bmw/common/all-models/i-series/i5/2023/Navigation/i5-bev.png"
+        ];
+        function showImage(num){
+            attels1.setAttribute("src",num);
         }
-        document.querySelector("#btn2").onclick = function(){
-            attels1.setAttribute("src","https://www.bmw.co.uk/content/dam/bmw/common/all-models/i-series/i5/2023/Navigation/i5-bev.png");
+        document.querySelector("#btn1").onclick = ()=>{
+            showImage(atteli[0])
         }
+        // Bultfunkcija = ()=>{} = function(){}
+        document.querySelector("#btn2").onclick = ()=>{
+            showImage(atteli[1])
+        }    
 
     </script>
 </body>
