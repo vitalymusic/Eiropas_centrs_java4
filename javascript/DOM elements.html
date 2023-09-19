@@ -17,7 +17,14 @@
 <body>
     <h1>Darbības ar elementiem uz lapas</h1>
     <p>Šeit būs teksts</p>
-    <img src="" alt="Tukš attēls" width="300px">
+    <div>
+        <img src="" alt="Tukš attēls" width="300px">
+        <div>
+            <button id="btn1">Attēls1</button>
+            <button id="btn2">Attēls2</button>
+        </div>
+    </div>
+    
     <div class="container">
 
     </div>
@@ -78,6 +85,22 @@
         // 6. onkeyup - atlaists klaviatūras taustiņš
         // https://www.w3schools.com/js/js_htmldom_events.asp
 
+
+        // Notikumu uzlikšana elementam - 
+
+
+        virsraksts1.onclick = function(event){
+            console.log(event);
+            virsraksts1.classList.toggle('border');
+        }
+
+        document.querySelector("#btn1").onclick = function(){
+            attels1.setAttribute("src","https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png");
+
+        }
+        document.querySelector("#btn2").onclick = function(){
+            attels1.setAttribute("src","https://www.bmw.co.uk/content/dam/bmw/common/all-models/i-series/i5/2023/Navigation/i5-bev.png");
+        }
 
     </script>
 </body>
