@@ -1,0 +1,29 @@
+<script>
+    // Uzdevums: Izveidot kalkulatoru, kuram ir jāizvēlas darbība un jāievada 2 skaitļi (Prompt)
+    // Izvada rezultātu
+
+    // 1. prasīt ievadīt skaitļus, prasīt ievadīt darbību
+    var sk1 = +prompt("Ievadiet pirmo skaitli"), //Unārais pluss nodrošina, ka teksta virkne, kas saņemta no dialogloga kļūst par skaitli
+        sk2 = +prompt("Ievadiet otro skaitli"),
+        darbiba = prompt("Ievadiet darbību"),
+        rezultats = 0;
+        if(!sk1 && !sk2 && !darbiba ){ //Izsaukumzīme pie mainīgā nozīmē ka tajā NAV nekas saglabāts;
+            alert("Nav ievadīti dati!");
+            
+        }
+
+        switch(darbiba){
+            case "*": rezultats = sk1*sk2;break;
+            case "/": rezultats = sk2==0?"Nedrīkst dalīt ar 0":sk1/sk2;break;
+            case "+": rezultats = sk1+sk2;break;
+            case "-": rezultats = sk1-sk2;break;
+            default:rezultats = "Šāda darbība nav paredzēta!";break;
+        }
+
+        document.write(rezultats);
+
+
+
+
+
+</script>
