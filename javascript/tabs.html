@@ -30,7 +30,7 @@
             padding: 10px;
         }
         .content section{
-            display: none;
+            /* display: none; */
         }
 
     </style>
@@ -39,9 +39,9 @@
 <body>
     <div class="wrapper">
         <div class="tabs">
-            <a href="#html" >HTML</a>
-            <a href="#css">CSS</a>
-            <a href="#js">JS</a>
+            <a href="#html" data-section="html">HTML</a>
+            <a href="#css" data-section="css">CSS</a>
+            <a href="#js" data-section="js">JS</a>
         </div>
         <div class="content">
             <section id="html">The HyperText Markup Language or HTML is the standard markup language for documents designed to be
@@ -72,10 +72,23 @@
                         link.classList.remove('tabs_active');
                     }
                     event.target.classList.add('tabs_active');
-                    console.log(event);
+                    showContent(event.target.dataset.section);
+                    
                 }
             }
 
+            function showContent(id){
+                for(section of sections){
+                    // display:none;
+                    if(section.getAttribute("id")==id){
+                        section.style.display = "block"
+                    }else{
+                        section.style.display = "none"
+                    }
+                }
+                
+            }
+            tabLinks[0].click();
 
 
 
