@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            width: 70%;
+            margin: auto;
+        }
+
+        .slide {
+            height: 300px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .slide img {
+            width: 100%;
+            /* transform: translate(0, 100px) */
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top:-216px;
+            padding: 10px;
+            
+        }
+        .buttons button{
+            height: 50px;
+            border:none;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="wrapper">
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1533282960533-51328aa49826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2lkZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+                    alt="">
+            </div>
+            <div class="slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVCwnPreIycPgKdhAvNyBlqjeisP0ylTYzWwx-YlwSpggDKYuNnQWN9igwEWXefONGcW4&usqp=CAU"
+                    alt="">
+            </div>
+            <div class="slide">
+                <img src="https://img.freepik.com/free-photo/new-york-city-manhattan-skyline_649448-1748.jpg" alt="">
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="left">Left</button>
+            <button class="right">Right</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        var slides = document.querySelectorAll('.slide'),
+            leftBtn = document.querySelector('.left'),
+            rightBtn = document.querySelector('.right');
+
+        var slideNumber = 0;
+
+        
+            function showSlide(slideNumber){
+                    for(slide of slides){
+                        slide.style.display = "none";
+                    }
+                    slides[slideNumber].style.display = "block";
+                }
+            function nexSlide(){
+                    //slideNumber = slideNumber + 1;
+                    slideNumber++;
+                if(slideNumber > slides.length -1){
+                    slideNumber = 0;
+                }
+                showSlide(slideNumber);
+            }
+                console.log(slideNumber);
+            function prevSlide(){
+                // slideNumber = slideNumber - 1;
+                slideNumber--;
+                if(slideNumber < 0){
+                    slideNumber = slides.length - 1;
+                }
+                
+                // 
+                showSlide(slideNumber);
+            }
+
+            leftBtn.onclick = ()=>{prevSlide()}
+            rightBtn.onclick = ()=>{nexSlide()}
+
+            showSlide(slideNumber);
+
+
+    </script>
+</body>
+
+</html>
