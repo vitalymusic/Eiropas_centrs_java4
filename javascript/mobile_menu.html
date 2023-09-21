@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .mobile_menu_btn{
+            font-size: 30pt;
+            color:dodgerblue;
+            border:none;
+            background-color:transparent;
+            cursor: pointer;
+        }
+        .mobile_menu_btn:active{
+            text-shadow: 0px 0px 20px grey;
+        }
+        .mobile_menu{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: dodgerblue;
+            padding: 20px 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px grey;
+            left:-150px;
+
+        }
+        .mobile_menu a{
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+            margin:10px 20px;
+            
+        }
+        .active{
+            left:10px !important;
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile_menu_btn"><i class="fa-solid fa-bars"></i></button>
+    <div class="mobile_menu active">
+        <a href="">Lapa1</a>
+        <a href="">Lapa2</a>
+        <a href="">Lapa3</a>
+    </div>
+</body>
+</html>
