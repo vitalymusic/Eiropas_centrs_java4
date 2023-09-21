@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        .wrapper{
+            width: 75%;
+            margin:auto;
+        }
+        .tabs{
+            padding: 10px 0px;
+            padding-bottom:0px;
+            border-bottom: 2px solid black;
+            display: flex;
+            gap:10px;
+        }
+        .tabs a{
+                padding: 10px;
+                
+        }
+        .tabs_active{
+            border:2px solid black !important;
+            border-bottom:none !important;
+
+        }
+        .content{
+            padding: 10px;
+        }
+        .content section{
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="tabs">
+            <a href="#html" >HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#js">JS</a>
+        </div>
+        <div class="content">
+            <section id="html">The HyperText Markup Language or HTML is the standard markup language for documents designed to be
+                displayed in a web browser. It defines the meaning and structure of web content. It is often assisted by
+                technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+            </section>
+            <section id="css">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a
+                document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or
+                XHTML).[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+
+            </section>
+            <section id="js">JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language that is one of the
+                core technologies of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use
+                JavaScript on the client side for webpage behavior,[10] often incorporating third-party libraries. All
+                major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+            </section>
+        </div>
+    </div>
+    <script>
+        var tabLinks = document.querySelectorAll('.tabs a'),
+            sections = document.querySelectorAll('section');
+
+
+            for(link of tabLinks){
+                link.onclick = (event)=>{
+                    event.preventDefault();
+                    for(link of tabLinks){
+                        link.classList.remove('tabs_active');
+                    }
+                    event.target.classList.add('tabs_active');
+                    console.log(event);
+                }
+            }
+
+
+
+
+    </script>
+</body>
+
+</html>
