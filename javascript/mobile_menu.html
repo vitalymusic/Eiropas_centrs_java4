@@ -26,6 +26,8 @@
             border-radius: 5px;
             box-shadow: 0px 0px 20px grey;
             left:-150px;
+            transition: all 0.1s ease-out;
+
 
         }
         .mobile_menu a{
@@ -37,15 +39,27 @@
         }
         .active{
             left:10px !important;
+            transition: all 0.3s ease-out;
         }
     </style>
 </head>
 <body>
     <button class="mobile_menu_btn"><i class="fa-solid fa-bars"></i></button>
-    <div class="mobile_menu active">
+    <!-- <i class="fa-solid fa-xmark"></i> -->
+    <div class="mobile_menu">
         <a href="">Lapa1</a>
         <a href="">Lapa2</a>
         <a href="">Lapa3</a>
     </div>
+    
+
+    <script>
+        var menuBtn = document.querySelector('.mobile_menu_btn'),
+            mobileMenu = document.querySelector('.mobile_menu');
+            menuBtn.onclick = ()=>{
+                menuBtn.querySelector('i').classList.toggle('fa-xmark');
+                mobileMenu.classList.toggle('active');
+            }  
+    </script>
 </body>
 </html>
