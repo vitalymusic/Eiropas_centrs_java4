@@ -89,16 +89,21 @@
             nextStepBtn = document.querySelector(".nextStep");
             makeOrderBtn = document.querySelector(".makeOrder");
 
+
             step2.style.display = "none";
             step3.style.display = "none";
+
+            formError = false;
             // console.log(step1.querySelectorAll("input"));
 
             nextStepBtn.onclick = ()=>{
                 step1.querySelectorAll("input").forEach(function(input){
                     if(input.value.length <3 ){
+                        formError = true;
                         input.classList.add("is-invalid");
                         input.classList.remove("is-valid");
                     }else{
+                        formError = false;
                         input.classList.remove("is-invalid");
                         input.classList.add("is-valid");
 
@@ -113,19 +118,24 @@
             makeOrderBtn.onclick = ()=>{
                 step2.querySelectorAll("input").forEach(function(input){
                     if(input.value.length <3 ){
+                        formError = true;
                         input.classList.add("is-invalid");
                         input.classList.remove("is-valid");
                     }else{
+                        formError = false;
                         input.classList.remove("is-invalid");
                         input.classList.add("is-valid");
 
-                        setTimeout(()=>{
+                        if(formError == false){
+                            setTimeout(()=>{
                             step2.style.display = "none";
                             step3.style.display = "block";
                             setTimeout(()=>{
                                 form.submit(); 
                             },2000);
                         },2000);
+                        }
+                        
                     }
                 })
             }
