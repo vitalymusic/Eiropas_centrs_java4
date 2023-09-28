@@ -31,27 +31,34 @@ var nextWeek = new Date(nextweekMilliseconds);
    console.log(nowMilliseconds,nextweekMilliseconds,now,nextWeek); 
 
 
- var timer = setInterval(()=>{
+//  var timer = setInterval(()=>{
 
     //nextweek
 
-   nowMilliseconds = new Date().getTime(); 
+   nowMilliseconds = new Date().getTime();  //Iegūst milisekundes no tekošā laika
 
-   var starpiba = nextweekMilliseconds - nowMilliseconds;
+   var starpiba = nextweekMilliseconds - nowMilliseconds; //Atrod starpību starp milisekundēm
 
-    var days = Math.floor(starpiba/(1000*60*60*24));
-    var hours = Math.floor(starpiba % (1000*60*60*24)/(1000*60*60))
-    var minutes = Math.floor((starpiba % (1000*60*60))/(1000*60));
+    var days = Math.floor(starpiba/(1000*60*60*24)); //Aprēķina cik veselas dienas paliek 
+    var hours = Math.floor(starpiba % (1000*60*60*24)/(1000*60*60)) //Atlikums cik veselas stundas palicis
+    var minutes = Math.floor((starpiba % (1000*60*60))/(1000*60));//Atlikums cik veselas minūtes palicis
     var seconds = Math.floor((starpiba % (1000*60))/ 1000);
-
+    //Atlikums cik veselas sekundes palicis
     if(starpiba <0){
-        clearInterval(timer);
+        clearInterval(timer);//Takā intervāls ar katru sekundi samazinās ja tas kļūst negatīvs tad taimeri apstādināt (setInterval)
     }
    console.log(days,hours,minutes,seconds);
 
 
- },1000);   
+//  },1000);   
 
 
-
+let i = 10;
+ var countdown = setInterval(()=>{
+    document.write(i);
+    i--;
+    if(i<0){
+        clearInterval(countdown);
+    }
+ },1000)
 </script>
