@@ -1,0 +1,22 @@
+<script>
+    var url = "https://jsonplaceholder.typicode.com/albums/1/photos"
+    fetch(url)
+    .then(function(data){
+        return data.json()
+    })
+    .then(function(data){
+        showItems(data);
+    })
+
+
+
+    function showItems(items){
+        items.forEach(function(item){
+            document.write(`
+                <div class="item">
+                    <h3>${item.title}</h3>
+                    <img src="${item.url}" alt="">
+            `);
+        })
+    }
+</script>
