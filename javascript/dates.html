@@ -1,0 +1,57 @@
+<script>
+    function paradiLaiku(){
+
+  
+    var now = new Date();
+    var stundas = now.getHours();
+    var minutes = now.getMinutes();
+
+    var datums = now.getDate();
+    var gads = now.getFullYear();
+    var menesis = now.getMonth();
+    var nedelasDiena = now.getDay()
+    var sekundes = now.getSeconds();
+
+    return [datums,menesis,gads,stundas,minutes,sekundes]
+}
+
+    // console.log(stundas,minutes,datums,gads,menesis,nedelasDiena,sekundes);
+
+
+    // setInterval(()=>{
+    //     document.body.innerHTML = `Pašlaik ir: ${paradiLaiku()}`;
+    // },1000);
+
+//    tekošais laiks  
+var now = new Date();
+var nowMilliseconds = Date.now();
+
+var nextweekMilliseconds = nowMilliseconds+(1000*60*60*24*7);
+var nextWeek = new Date(nextweekMilliseconds);
+   console.log(nowMilliseconds,nextweekMilliseconds,now,nextWeek); 
+
+
+ var timer = setInterval(()=>{
+
+    //nextweek
+
+   nowMilliseconds = new Date().getTime(); 
+
+   var starpiba = nextweekMilliseconds - nowMilliseconds;
+
+    var days = Math.floor(starpiba/(1000*60*60*24));
+    var hours = Math.floor(starpiba % (1000*60*60*24)/(1000*60*60))
+    var minutes = Math.floor((starpiba % (1000*60*60))/(1000*60));
+    var seconds = Math.floor((starpiba % (1000*60))/ 1000);
+
+    if(starpiba <0){
+        clearInterval(timer);
+    }
+   console.log(days,hours,minutes,seconds);
+
+
+ },1000);   
+
+
+
+</script>
