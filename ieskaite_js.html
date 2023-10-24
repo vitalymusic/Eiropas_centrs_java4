@@ -107,6 +107,39 @@
                 <input type="submit" value="Nozūtīt ziņu">
             </form>
         </section>
+
+
+        <script>
+//             5.1. Izmantojot JS ievietot dokumentā jaunu DIV elementu un      ievietot tajā tekstu:
+
+// "Šis teksts ir ievietots ar JS";
+
+            
+            document.body.innerHTML +=`
+                <div class="jsText">
+                    Šis teksts ir ievietots ar JS 
+                </div>    
+            `;
+
+
+
+            // Izmantojot JS visiem rindkopas elementiem pievienot "click" notikumu, pēc kura tiek izvadīts Dialoglodziņš ar šīs rindkopas saturu. 
+            var rindkopas = document.querySelectorAll('p');
+            for (rindkopa of rindkopas){
+                // rindkopa.onclick = function(){
+                //     alert(this.innerText);
+                // }
+
+                rindkopa.onclick = (e)=>{
+                    alert(e.target.innerHTML);
+                }
+            }
+
+
+
+
+            // 5.3. Formai veikt lauku ievades pārbaudi, lai katrā laukā varētu ievadīt ne mazāk kā 3 simbolus (izvadīt paziņojumu)
+        </script>
        
 </body>
 </html>
