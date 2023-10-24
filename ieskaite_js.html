@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ieskaites darbs JS</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        h1{
+            color:red;
+            font-size: 25pt;
+            text-align: center;
+        }
+        p{
+            /* 
+                Rindkopas: Fona krāsa: gaiši zila, atkāpe no iekšējām malām 10px; ārējās atkāpes: 15px, Apmale zilā krāsā
+            */
+            background-color: lightblue;
+            padding: 10px;
+            margin: 15px;
+            border: 2px solid blue
+        }
+
+        nav{
+            height: 40px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:10px
+        }
+        nav a{
+            text-decoration: none;
+            font-size: 20pt;
+            color:white
+
+        }
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+        <nav>
+            <a href="#sadala1">Sadaļa 1</a>
+            <a href="#sadala2">Sadaļa 2</a>
+            <a href="#sadala3">Kontakti</a>
+        </nav>
+        <section id="sadala1">
+            <h1>HTML</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ab assumenda quos sequi in magnam corrupti, quis facilis mollitia perferendis, illum error est porro provident earum, molestiae repellendus perspiciatis nesciunt.</p>
+            <img src="https://static.vecteezy.com/system/resources/previews/012/697/299/original/stylized-3d-html-logo-design-free-png.png" alt="">
+        </section>
+        <section id="sadala2">
+
+        </section>
+        <section id="sadala3">
+            <form action="">
+                <label>
+                    Vārds:
+                    <input type="text" name="name">
+                </label>
+                <label>
+                    Uzvārds:
+                    <input type="text" name="surname">
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Ziņa:
+                    <textarea name="message"></textarea>
+                </label>
+                <input type="submit" value="Nozūtīt ziņu">
+            </form>
+        </section>
+       
+</body>
+</html>
+
+
+<!-- 
+    Patstāvīgais uzdevums JS Progrmmēšanā
+
+1. Izveidot jaunu HTML dokumentu un ievietot tajā sākuma strūktūru
+
+2. Dokumentam pievienot saturu pēc sava ieskata kas sastāv no šādiem elementiem:
+
+Virsraksts, rindkopa, attēls, navigācija, hipersaites. Elementi drīkst atkārtoties un teksta saturu var brīvi 
+
+
+3. Pievienot Stila elementu (<style></style>)
+
+4. Veikt elementu vizuālo noformējumu ar CSS:
+
+Virsraksti: Sarkana krāsa, burtu lielums-25pt, tekts centrēts;
+
+Rindkopas: Fona krāsa: gaiši zila, atkāpe no iekšējām malām 10px; ārējās atkāpes: 15px, Apmale zilā krāsā
+
+Hipersaites: Noņemt pasvītrojumu
+
+Attēli: Platums 300px, 
+
+Formu: 2 teksta lauki (vārds un uzvārds), viens daudzrindiņu lauks (textarea);
+
+5. Pievienot JS kodu:
+
+5.1. Izmantojot JS ievietot dokumentā jaunu DIV elementu un ievietot tajā tekstu:
+
+"Šis teksts ir ievietots ar JS";
+
+5.2. Izmantojot JS visiem rindkopas elementiem pievienot "click" notikumu, pēc kura tiek izvadīts Dialoglodziņš ar šīs rindkopas saturu. 
+
+5.3. Formai veikt lauku ievades pārbaudi, lai katrā laukā varētu ievadīt ne mazāk kā 3 simbolus (izvadīt paziņojumu)
+
+5.4. Ja formā nav kļūdu, Izmantjot metodi form.submit() nosūtīt formas datus" https://www.formbackend.com/ vietnē 
+
+ -->
